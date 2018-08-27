@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    background: url(../assets/Layer.png) no-repeat;
+    background-size: cover;
+}
+
+.content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 400px;
+    background: #1e2122c9;
+    box-sizing: border-box;
+    box-shadow: 0px 26px 16px -6px #232628c1;
+    padding: 20px 0;
+}
+
+.content > input {
+    display: none;
+}
+
+.content > label {
+    display: block;
+    float: left;
+    padding: 12px 0;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.content > label:first-of-type {
+    margin-left: 40px;
+}
+
+.content > label:last-of-type {
+    margin-right: 40px;
+}
+
+.content > label:hover,
+.content > input:checked + label {
+    border-bottom: 3px solid #f47e16;
+}
+
+.tabs {
+    clear: both;
+    height: 500px;
+}
+
+.tabs > div {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 10px 40px 0px;
+    line-height: 1.4em;
+    opacity: 0;
+    z-index: 0;
+}
+
+form {
+    margin-top: 15px;
+    position: relative;
+    box-sizing: border-box;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form > .terms-checkbox {
+    align-self: flex-start;
+}
+
+form > input {
+    box-sizing: border-box;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #ebebeb;
+    color: #ffffff;
+    padding: 0 10px;
+    display: block;
+    width: 100%;
+    line-height: 2.5em;
+    margin: 0 auto 40px;
+    font-size: 1.2em;
+}
+
+.submit-btn {
+    margin: 35px auto 10px;
+    width: 50%;
+    background: #f47e16;
+    border: none;
+    border-radius: 40px;
+}
+
+#sign-in:checked ~ .tabs > div.sign-in-wrapper,
+#sign-up:checked ~ .tabs > div.sign-up-wrapper {
+    opacity: 1;
+    z-index: 1;
+}
