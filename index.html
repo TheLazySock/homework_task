@@ -9,40 +9,38 @@
 </head>
 
 <body>
-    <section class="wrapper">
-        <div class="content">
-            <input type="radio" name="tabs" id="sign-in" checked>
-            <label for="sign-in">SIGN IN</label>
-            <input type="radio" name="tabs" id="sign-up">
-            <label for="sign-up">SIGN UP</label>
-            <div class="tabs">
-                <div class="sign-in-wrapper">
-                    <form action="https://reqres.in/api/login" method="post">
-                        <input id="email" type="email" name="email" placeholder="Email" required />
-                        <input id="password" type="password" name="password" placeholder="Password" required />
-                        <div class="terms-checkbox">
-                            <input id="keeplogged" type="checkbox" name="keeplogged" />
-                            <label for="keeplogged">Keep me logged in</label>
-                        </div>
-                        <input class="submit-btn" type="submit" value="LOGIN" />
-                        <h4>Forgot password?</h4>
-                    </form>
-                </div>
-                <div class="sign-up-wrapper">
-                    <form action="https://reqres.in/api/register" method="post">
-                        <input id="phone" type="tel" name="mobilePhone" placeholder="Mobile Phone" pattern="[0-9]{9,12}" required />
-                        <input id="email" type="email" name="email" placeholder="Email ID" required />
-                        <input id="password" type="password" name="password" placeholder="Password" required />
-                        <div class="terms-checkbox">
-                            <input id="agreed" type="checkbox" name="agreed" required />
-                            <label for="agreed">I agree to terms and conditions</label>
-                        </div>
-                        <input class="submit-btn" type="submit" value="REGISTER" />
-                    </form>
-                </div>
+    <div class="content">
+        <input type="radio" name="tabs" id="sign-in" checked>
+        <label for="sign-in">SIGN IN</label>
+        <input type="radio" name="tabs" id="sign-up">
+        <label for="sign-up">SIGN UP</label>
+        <div class="tabs">
+            <div class="sign-in-wrapper">
+                <form action="https://reqres.in/api/login" method="post">
+                    <input id="email" type="email" name="email" placeholder="Email" required />
+                    <input id="password" type="password" name="password" placeholder="Password" required />
+                    <div class="terms-checkbox">
+                        <input id="keeplogged" type="checkbox" name="keeplogged" />
+                        <label for="keeplogged">Keep me logged in</label>
+                    </div>
+                    <input class="submit-btn" type="submit" value="LOGIN" />
+                    <h4>Forgot password?</h4>
+                </form>
+            </div>
+            <div class="sign-up-wrapper">
+                <form action="https://reqres.in/api/register" method="post">
+                    <input id="phone" type="tel" name="mobilePhone" placeholder="Mobile Phone" pattern="[0-9]{9,12}" required />
+                    <input id="email" type="email" name="email" placeholder="Email ID" required />
+                    <input id="password" type="password" name="password" placeholder="Password" required />
+                    <div class="terms-checkbox">
+                        <input id="agreed" type="checkbox" name="agreed" required />
+                        <label for="agreed">I agree to terms and conditions</label>
+                    </div>
+                    <input class="submit-btn" type="submit" value="REGISTER" />
+                </form>
             </div>
         </div>
-    </section>
+    </div>
 </body>
 
 </html>
