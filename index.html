@@ -19,10 +19,11 @@
                 <form action="https://reqres.in/api/login" method="post">
                     <input id="email" type="email" name="email" placeholder="Email" required />
                     <input id="password" type="password" name="password" placeholder="Password" required />
-                    <div class="terms-checkbox">
-                        <input id="keeplogged" type="checkbox" name="keeplogged" />
+                    <label class="terms-checkbox">
+                        <input class="real-checkbox" id="keeplogged" type="checkbox" name="keeplogged" />
+                        <span class="custom-checkbox"></span>
                         <label for="keeplogged">Keep me logged in</label>
-                    </div>
+                    </label>
                     <input class="submit-btn" type="submit" value="LOGIN" />
                     <h4>Forgot password?</h4>
                 </form>
@@ -32,10 +33,11 @@
                     <input id="phone" type="tel" name="mobilePhone" placeholder="Mobile Phone" pattern="[0-9]{9,12}" required />
                     <input id="email" type="email" name="email" placeholder="Email ID" required />
                     <input id="password" type="password" name="password" placeholder="Password" required />
-                    <div class="terms-checkbox">
-                        <input id="agreed" type="checkbox" name="agreed" required />
+                    <label class="terms-checkbox">
+                        <input class="real-checkbox" id="agreed" type="checkbox" name="agreed" required />
+                        <span class="custom-checkbox"></span>
                         <label for="agreed">I agree to terms and conditions</label>
-                    </div>
+                    </label>
                     <input class="submit-btn" type="submit" value="REGISTER" />
                 </form>
             </div>

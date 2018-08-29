@@ -1,37 +1,27 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box; 
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: #ffffff;
     background: url(../assets/Layer.png) no-repeat;
     background-size: cover;
-    color: white;
     width: 100%;
     height: 100vh;
-    overflow-y: hidden;
 }
 
-/* .wrapper {
-    width: 100vw;
-    height: 100vh;
-    color: white;
-    background: url(../assets/Layer.png) no-repeat;
-    background-size: cover;
-} */
-
 .content {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding: 10px 40px;
     display: block;
     width: 400px;
+    height: 550px;
     background: rgba(30, 33, 34, 0.788);
-    box-sizing: border-box;
     box-shadow: 0px 26px 16px -6px rgba(35, 38, 40, 0.757);
-    padding: 20px 0;
 }
 
 .content > input {
@@ -41,17 +31,10 @@ body {
 .content > label {
     display: block;
     float: left;
-    padding: 12px 0;
-    margin: 0 20px;
+    margin: 20px 15px 5px;
     cursor: pointer;
-}
-
-.content > label:first-of-type {
-    margin-left: 40px;
-}
-
-.content > label:last-of-type {
-    margin-right: 40px;
+    padding: 5px 0;
+    font-size: 1.4em;
 }
 
 .content > label:hover,
@@ -59,28 +42,29 @@ body {
     border-bottom: 3px solid #f47e16;
 }
 
+.content > label:first-of-type {
+    margin-left: 0;
+}
+
 .tabs {
     clear: both;
-    height: 500px;
 }
 
 .tabs > div {
     position: absolute;
     box-sizing: border-box;
-    width: 100%;
-    top: 50%;
-    transform: translate(0, -50%);
-    padding: 10px 40px 0px;
+    padding: 10px 0 0px;
     line-height: 1.4em;
     opacity: 0;
     z-index: 0;
 }
 
 form {
-    margin-top: 15px;
+    width: 320px;
+    margin-top: -15px;
     position: relative;
     box-sizing: border-box;
-    height: 450px;
+    height: 470px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,18 +75,67 @@ form > .terms-checkbox {
     align-self: flex-start;
 }
 
+.real-checkbox {
+	display: none;
+}
+
+.custom-checkbox{
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+	width: 16px; 
+	height: 16px;
+	border: 1px solid rgba(255, 255, 255, 0.398);
+	border-radius: 2px;
+}
+
+.custom-checkbox,
+.label {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.real-checkbox:checked + .custom-checkbox {
+    background: #0a5383;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.real-checkbox:checked + .custom-checkbox::after {
+    content: "\2713";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    font-size: 14px;
+    color: white;
+}
+
 form > input {
     box-sizing: border-box;
     background: none;
     border: none;
     border-bottom: 2px solid #ebebeb;
     color: #ffffff;
-    padding: 0 10px;
     display: block;
     width: 100%;
     line-height: 2.5em;
     margin: 0 auto 40px;
     font-size: 1.2em;
+}
+
+input:-moz-ui-invalid {
+    box-shadow: none;
+}
+
+input::-moz-placeholder {
+    color: #ffffff;
+    opacity: 0.75;
+}
+input::-webkit-input-placeholder {
+    color: #ffffff;
+    opacity: 0.75;
 }
 
 .submit-btn {
@@ -121,11 +154,16 @@ form > input {
 
 @media screen and (max-width: 600px) {
     .content {
-        width: 90%;
+        width: 340px;
+    }
+
+    form {
+        width: 260px;
+        box-sizing: content-box;
     }
 
     .submit-btn {
-        width: 60%;
+        width: 80%;
     }
 }
 
