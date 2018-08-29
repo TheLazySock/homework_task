@@ -18,9 +18,9 @@
     transform: translate(-50%, -50%);
     display: block;
     width: 400px;
-    background: #1e2122c9;
+    background: rgba(30, 33, 34, 0.788);
     box-sizing: border-box;
-    box-shadow: 0px 26px 16px -6px #232628c1;
+    box-shadow: 0px 26px 16px -6px rgba(35, 38, 40, 0.757);
     padding: 20px 0;
 }
 
@@ -107,4 +107,21 @@ form > input {
 #sign-up:checked ~ .tabs > div.sign-up-wrapper {
     opacity: 1;
     z-index: 1;
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        width: 90%;
+    }
+
+    .submit-btn {
+        width: 60%;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .wrapper {
+        min-height: 700px;
+        height: 100vh;
+    }
 }
