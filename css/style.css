@@ -141,6 +141,7 @@ input::-webkit-input-placeholder {
 
 .submit-btn {
     margin: 35px auto 10px;
+    line-height: 35px;
     width: 50%;
     background: #f47e16;
     border: none;
